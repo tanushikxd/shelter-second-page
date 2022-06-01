@@ -1,0 +1,91 @@
+
+@mixin sm-block() {
+    @media  screen and(max-width: 768px) {
+        @content;
+    }
+}
+@mixin medium-block() {
+    @media  screen and(max-width: 991px) {
+        @content;
+    }
+}
+$georgia: 'Georgia', serif;
+$Arial: 'Arial', sans-serif;
+$mainColor: #F1CDB3;
+$white: white;
+$white-light: #FAFAFA;
+$gray: #CDCDCD;
+$black: #292929;
+$dark-lighter: #545454;
+$dark-light: #4C4C4C;
+$gray-dark: #828282;
+$letterS: 0.06em;
+$hoverC: #FDDCC4;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin fontsH() {
+    font-family: 'Georgia', serif;
+    font-weight: 400;
+    color: $dark-lighter;
+    font-size: 35px;
+    line-height: 1.3;
+}
+h4{
+    font-size: 20px;
+    line-height: 1.15;
+}
+h3{
+    font-size: 22px;
+    line-height: 1.15;
+}
+h2{
+    color: $dark-lighter;
+}
+h1{
+    color: $dark-lighter;
+}
+@mixin fontsB () {
+    font-family: 'Arial', sans-serif;
+    font-weight: 400;
+    color: $black;
+    font-size: 15px;
+    letter-spacing: $letterS;
+}
+p{
+    font-family: $gray;
+    line-height: 1.6;
+}
+@mixin container() {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    color: $gray;
+    &:focus, &:active{
+        outline: none;
+    }
+   
+}
+ul{
+    list-style: none;
+}
+button{
+    display: inline-block;
+    transition: all .35s ease-in-out;
+    border: 1px solid $mainColor;
+    background-color: $mainColor;
+    cursor: pointer;
+    font-family: $georgia;
+    color: $dark-lighter;
+    font-size: 17px;
+    line-height: 1.3;
+    padding: 10px 15px 10px 60px;
+    border-radius: 9px;
+}
